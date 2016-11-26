@@ -1,5 +1,5 @@
 /*
-  GBoard 0.5
+  LeeBoard 0.5
   Marc Ciufo Green 30/05/2016
 
   Code for a MIDI pedal board for use with Apple MainStage
