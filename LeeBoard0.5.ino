@@ -55,7 +55,6 @@ void setup()
 
 void loop()
 {
-//  exprPedal(); // read expression pedal and send MIDI if it's moved *** REMEMBER TO UNCOMMENT THIS! ***
   shiftWrite(); // write current state of LED to shift registers
   readModeButton(); // check the mode button
 
@@ -229,21 +228,3 @@ void flashLeds()
     }
   }
 }
-
-void exprPedal()
-{
-  if (digitalRead(PEDALSWITCH))
-  {
-    pedalValue = analogRead(PEDAL); // read expression pedal
-    midiVal = map(pedalValue, 10, 1010, 0, 127); // map reading to MIDI
-
-    if (midiVal != lastMidiVal) // if pedal has moved
-    {
-      midiSend(0xB0, 11, midiVal); // send the MIDI data
-    }
-
-    lastMidiVal = midiVal; // remember last pedal position
-  }
-}
-
-
