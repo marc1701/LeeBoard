@@ -55,7 +55,7 @@ void setup()
 
 void loop()
 {
-//  exprPedal(); // read expression pedal and send MIDI if it's moved *** REMEMBER TO UNCOMMENT THIS! ***
+  exprPedal(); // read expression pedal and send MIDI if it's moved *** REMEMBER TO UNCOMMENT THIS! ***
   shiftWrite(); // write current state of LED to shift registers
   readModeButton(); // check the mode button
 
